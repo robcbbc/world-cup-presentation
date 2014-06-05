@@ -83,9 +83,9 @@
 					<section>
 						<h2>Why?</h2>
 						<ul >
-							<li class="fragment">Huge audience interest</li>
+							<li class="fragment">Huge audience interest <p class="fragment">around 44m</p></li>
                             <li class="fragment">Knock on benefits of talking to Sport</li>
-                            <li class="fragment">Drunken promises between editorial and tech</li>
+                            <li class="fragment">Drunken promises between editorial and tech leads</li>
 						</ul>
 					</section>
 					<section>
@@ -93,13 +93,13 @@
 						<ul >
 							<li class="fragment">Seat of the pants Agile dev</li>
                             <li class="fragment">Lots of coffee</li>
+                            <li class="fragment">..and sporty gifs</li>
 						</ul>
 					</section>
 				</section>
 
                 <section>
                     <h1>Localised Sport Data App</h1>
-                     <!--img src="./img/world-map.png" /-->
                 </section>
                 <section>
                     
@@ -136,22 +136,106 @@ $media-query-free-breakpoint: 900px;
                     <h1>Decouple their models</h1>
                 </section>
                 <section>
-                    <h1>Translate it all</h1>
+                    <section>
+                        <h1>Translations</h1>
+                        <img src="./img/spreadsheet.png" />
+                        - chasing eloquent cockroaches
+                        - iterative 
+                    </section>
                 </section>
                 <section>
-                    <h1>Make it purdy</h1>
+                    <section>
+                        <h1>Make it purdy</h1>
+                            <p>logicless templates</p>
+<pre class="fragment">
+/**
+ * need to do this because mustache doesnt like associative arrays
+ */
+$this->groups = array_values($this->groups);
+$this->jumplinks = $this->prepareJumplinks($this->groups);
+$this->knockout = array_values($this->knockout);
+</pre>
+                    </section>
+                    <section>
+                            <p>tested view models in presenters</p>
+<pre class="fragment">
+/** 
+ * @test
+ */
+public function itShouldPresentKnockoutFixtures()
+{
+    $matches = $this->stubMatches(
+        array(
+            array('getGroupName' => 'Group A', 'isGroup' => true),
+            ...
+        )
+    );
+
+    $tables = $this->stubTables(array());
+
+    $this->presenter->present();
+
+    // Verifies there are three groups
+    $this->assertEquals(2, count($this->presenter->knockout));
+
+    // Verifies the number of fixtures per group
+    $this->assertEquals(2, count($this->presenter->knockout[0]['fixtures']));
+    $this->assertEquals(1, count($this->presenter->knockout[1]['fixtures']));
+
+    //Should order groups by table, not by fixture
+    $this->assertEquals('Last 16', $this->presenter->knockout[0]['name']);
+    $this->assertEquals('Semi Final', $this->presenter->knockout[1]['name']);
+
+    //Verifies render was called on matches
+    $this->verifyRenders($matches, $tables);
+}
+</pre>
+                    </section>
+                    <section>
+                        <h2>Tricky bits</h2>
+                        <p class="fragment">rtl</p>
+                        <img src="arabic" class="fragment">
+
+                    </section>
+                    <section>
+                        <h2>..more tricky bits</h2>
+                        <p class="fragment">big words</p>
+                        <img src="russian" class="fragment">
+                        
+                    </section>
                 </section>
                 <section>
-                    <h1>Desktop and responsive</h1>
+                    <section>
+                        <h1>Desktop and responsive</h1>
+                        <p>Dualism FTW</p>
+                        <p class="fragment">Responsive iFrame</p>
+<pre class="fragment"><xmp>
+{{#showNonIFrameComponents}}
+    <div class="group-stage__jumplinks-wrapper">
+        <ul class="group-stage__jumplinks">
+            {{#jumplinks}}
+                <li class="group-stage__jumplink{{last}}">
+                    <a href="#{{target}}">{{name}}</a>
+                </li>
+            {{/jumplinks}}
+        </ul>
+    </div>
+{{/showNonIFrameComponents}}
+</xmp></pre>
+                            - logicless templates - mostly
+                            - rtl - ltr fully responsive
+                            - russian table pic
+                    </section>
 
                 </section>
-
                 <section>
-                    <h1>Fin.</h1>
+                   <section>
+                        <h1>NFR</h1>
+                            - logicless templates - mostly
+                            - rtl - ltr fully responsive
+                            - russian table pic
+                    </section>
                 </section>
-
-
-
             </div>
 
         </div>
