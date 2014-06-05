@@ -1,67 +1,67 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-		<title>You get a prize for noticing the title, Oli's round</title>
+        <title>You get a prize for noticing the title, Oli's round</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-	<body>
+    <body>
 
-		<div class="reveal">
+        <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<section>
-						<h1>World Cup 2014</h1>
-						<p class="fragment">28 languages</p>
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <section>
+                        <h1>World Cup 2014</h1>
+                        <p class="fragment">28 languages</p>
                         <p class="fragment">5 sprints</p>
                         <p class="fragment">137 points</p>
-					</section>
-					<section>
-						<h2>Who?</h2>
-						<ul >
-							<li class="fragment">World Service
-								<p class="fragment">WS Dev <span class="fragment">- all of them</span></p>
-								<p class="fragment">WS Editorial<sup>27</sup></p>
-								<p class="fragment">Sport</p>
+                    </section>
+                    <section>
+                        <h2>Who?</h2>
+                        <ul >
+                            <li class="fragment">World Service
+                                <p class="fragment">WS Dev <span class="fragment">- all of them</span></p>
+                                <p class="fragment">WS Editorial<sup>27</sup></p>
+                                <p class="fragment">Sport</p>
                             </li>
-						</ul>
-					</section>
-					<section>
-						<h2>What?</h2>
-						<ul >
-							<li class="fragment">Localised Sport Data App</li>
-							<li class="fragment">What?
-								<p class="fragment">Hook up the Sport API</p>
-								<p class="fragment">Decouple their models</p>
-								<p class="fragment">Translate it all</p>
-								<p class="fragment">Make it purdy</p>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>What?</h2>
+                        <ul >
+                            <li class="fragment">Localised Sport Data App</li>
+                            <li class="fragment">What?
+                                <p class="fragment">Hook up the Sport API</p>
+                                <p class="fragment">Decouple their models</p>
+                                <p class="fragment">Translate it all</p>
+                                <p class="fragment">Make it purdy</p>
                                 <p class="fragment">Desktop and responsive</p>
 							</li>
 						</ul>
@@ -102,38 +102,72 @@
                     <h1>Localised Sport Data App</h1>
                 </section>
                 <section>
-                    
                     <section>
                         <h1>Hook up the Sport API</h1>
-                        <p>wide.css</p>
-<pre><code>@import '../../partials/base/_wide';</code></pre>
-
-<div class="fragment">
-<p>old-ie.css</p>
-<pre><code>
-$media-queries: false;
-$media-query-free-breakpoint: 900px;
-@import '../../partials/base/_wide';
-                            </code></pre>
-                        </div>
                     </section>
                     <section>
-                        <h1>Hook up the Sport API</h1>
-                        <p>wide.css</p>
-<pre><code>@import '../../partials/base/_wide';</code></pre>
-
-<div class="fragment">
-<p>old-ie.css</p>
-<pre><code>
-$media-queries: false;
-$media-query-free-breakpoint: 900px;
-@import '../../partials/base/_wide';
-                            </code></pre>
-                        </div>
+                        <h2>Live Broker API</h2>
                     </section>
+                    <section>
+                        <h2>Sports Data API</h2>
+                    </section>
+                    <section>
+                        <h2>bbc-pal-library-onesport</h2>
+                        <ul >
+                            <li class="fragment">API integration 700 loc, 30+ unit tests</li>
+                            <li class="fragment">Builders, 5 Classes, 1000+ loc, 40+ unit tests </li>
+                            <li class="fragment">:-/</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Gazzetta</h2>
+                        <ul >
+                            <li class="fragment">PAL app with bbc-pal-library-onesport as dependency</li>
+                            <li class="fragment">Routeable</li>
+                            <li class="fragment">Integrate with Tabloid via shared presenter</li>
+                            <li class="fragment">Uses the sport lib defensively</li>
+                        </ul>
+                    </section>
+                    <section>
+                            <h2>Use the sport lib defensively</h2>
+                            <li class="fragment">Don't fatal if lib changes</li>
+                            <li class="fragment">Throw exceptions in the right places</li>
+                    </section>
+                    <section><img src="./img/provider.png"/></section>
+                    <section><img src="./img/proxy.png"/></section>
+                    <section><img src="./img/source.png"/></section>
                 </section>
                 <section>
-                    <h1>Decouple their models</h1>
+                    <section>
+                        <h1>Decouple their models</h1>
+                    </section>
+                    <section>
+                        <h2>Sport models</h2>
+                        <ul>
+                            <li class="fragment">SoccerEvent, Team, Competition, Event, Table, TablePosition...</li>
+                            <li class="fragment">Using them as a data source, might want to swap out</li>
+                            <li class="fragment">Shouldn't make it to a presenter/view</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>BBC/Gazzetta/Model</h2>
+                        <ul>
+                            <li class="fragment">Match</li>
+                            <li class="fragment">Table</li>
+                            <li class="fragment">TableRow</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Populating our models</h2>
+                        <ul>
+                            <li class="fragment">Transformer</li>
+                            <li class="fragment">Factory</li>
+                        </ul>
+                    </section>
+                    <section><img src="./img/transformer.png"/></section>
+                    <section><img src="./img/transformertest.png"/></section>
+                    <section><img src="./img/factory.png"/></section>
+                    <section><img src="./img/abbrev.png"/></section>
                 </section>
                 <section>
                     <section>
