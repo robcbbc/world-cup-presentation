@@ -53,6 +53,13 @@
                             </li>
                         </ul>
                     </section>
+					<section>
+						<h2>When?</h2>
+						<ul >
+							<li class="fragment">Spike in Mid March</li>
+							<li class="fragment">Brazil v Croatia t-minus 7 days, 1 hr</li>
+						</ul>
+					</section>
                     <section>
                         <h2>What?</h2>
                         <ul >
@@ -63,16 +70,9 @@
                                 <p class="fragment">Translate it all</p>
                                 <p class="fragment">Make it purdy</p>
                                 <p class="fragment">Desktop and responsive</p>
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h2>When?</h2>
-						<ul >
-							<li class="fragment">Spike in Mid March</li>
-							<li class="fragment">Brazil v Croatia t-minus 7 days, 1 hr</li>
-						</ul>
-					</section>
+                            </li>
+                        </ul>
+                    </section>
 					<section>
 						<h2>Where?</h2>
 						<ul >
@@ -121,11 +121,11 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>Gazzetta</h2>
+                        <h2><span style="text-transform:lowercase">la</span> Gazzetta <span style="text-transform:lowercase">dello sport</span></h2>
                         <ul >
                             <li class="fragment">PAL app with bbc-pal-library-onesport as dependency</li>
                             <li class="fragment">Routeable</li>
-                            <li class="fragment">Integrate with Tabloid via shared presenter</li>
+                            <li class="fragment">Integrates with Tabloid via shared presenter</li>
                             <li class="fragment">Uses the sport lib defensively</li>
                         </ul>
                     </section>
@@ -180,49 +180,11 @@
                     <section>
                         <h1>Make it purdy</h1>
                             <p>logicless templates</p>
-<pre class="fragment">
-/**
- * need to do this because mustache doesnt like associative arrays
- */
-$this->groups = array_values($this->groups);
-$this->jumplinks = $this->prepareJumplinks($this->groups);
-$this->knockout = array_values($this->knockout);
-</pre>
+                            <img src="./img/mustache.png"/>
                     </section>
                     <section>
                             <p>tested view models in presenters</p>
-<pre class="fragment">
-/** 
- * @test
- */
-public function itShouldPresentKnockoutFixtures()
-{
-    $matches = $this->stubMatches(
-        array(
-            array('getGroupName' => 'Group A', 'isGroup' => true),
-            ...
-        )
-    );
-
-    $tables = $this->stubTables(array());
-
-    $this->presenter->present();
-
-    // Verifies there are three groups
-    $this->assertEquals(2, count($this->presenter->knockout));
-
-    // Verifies the number of fixtures per group
-    $this->assertEquals(2, count($this->presenter->knockout[0]['fixtures']));
-    $this->assertEquals(1, count($this->presenter->knockout[1]['fixtures']));
-
-    //Should order groups by table, not by fixture
-    $this->assertEquals('Last 16', $this->presenter->knockout[0]['name']);
-    $this->assertEquals('Semi Final', $this->presenter->knockout[1]['name']);
-
-    //Verifies render was called on matches
-    $this->verifyRenders($matches, $tables);
-}
-</pre>
+                            <img src="./img/viewtest.png"/>
                     </section>
                     <section>
                         <h2>Tricky bits</h2>
